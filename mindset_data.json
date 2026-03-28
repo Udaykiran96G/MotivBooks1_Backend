@@ -1,0 +1,32 @@
+[
+  {
+    "question": "I feel unmotivated. How can I improve my mindset?",
+    "answer": "Replace negative thoughts with logical and constructive thinking.",
+    "category": "mindset",
+    "emotion": "unmotivated"
+  },
+  {
+    "question": "I feel overwhelmed. How can I improve focus?",
+    "answer": "Start small, stay consistent, and focus on systems rather than motivation.",
+    "category": "focus",
+    "emotion": "overwhelmed"
+  },
+  {
+    "question": "I feel lazy. How can I improve focus?",
+    "answer": "Remove distractions and work in short focused sessions.",
+    "category": "focus",
+    "emotion": "lazy"
+  },
+  {
+    "question": "I feel stressed. How can I improve productivity?",
+    "answer": "Focus on progress, not perfection, and keep moving forward.",
+    "category": "productivity",
+    "emotion": "stressed"
+  },
+  {
+    "question": "I feel lazy. How can I improve mindset?",
+    "answer": "Train your mind to focus by practicing deep work regularly.",
+    "category": "mindset",
+    "emotion": "lazy"
+  }
+]

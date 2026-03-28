@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Environment variables (CRITICAL - contains API keys & passwords)
+.env
+
+# Database files (local data)
+db.sqlite3
+*.sqlite3
+
+# Media uploads
+media/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test & debug scripts
+test_*.py
+check_*.py
+verify_*.py
+debug_*.py
+populate_*.py
+add_*.py
+upload_*.py
+*.txt
+!requirements.txt
+
+# Firebase credentials
+firebase-service-account.json
+
+# Logs
+*.log
+server_log*
