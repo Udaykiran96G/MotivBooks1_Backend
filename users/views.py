@@ -193,6 +193,28 @@ class AdminLoginView(CustomTokenObtainPairView):
     """Explicit admin login view. Enforces staff check and restricted access."""
     serializer_class = AdminTokenObtainPairSerializer
 
+
+class AdminRegisterView(APIView):
+    """Register a new admin (is_staff=True) account."""
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        serializer = UserRegistrationSerializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.save()
+            # Promote to staff/admin
+            user.is_staff = True
+            user.save()
+            refresh = RefreshToken.for_user(user)
+            return Response({
+                'user': UserSerializer(user).data,
+                'refresh': str(refresh),
+                'access': str(refresh.access_token),
+                'is_staff': True,
+            }, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
 class UserProgressView(APIView):
     permission_classes = [IsAuthenticated]
 

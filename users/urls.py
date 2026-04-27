@@ -3,7 +3,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView as BaseTokenObtainPairView
 from .views import (
-    RegisterView, CustomTokenObtainPairView, AdminLoginView, 
+    RegisterView, CustomTokenObtainPairView, AdminLoginView, AdminRegisterView,
     UserProgressView, GoalDetailsView, 
     ReadingAnalyticsView, SavedQuotesView, DashboardView, 
     DailyBoostView, UserBadgesView, JournalEntryView, HomeFeedView,
@@ -71,6 +71,7 @@ urlpatterns = [
 
     # Admin endpoints
     path('admin/login/', AdminLoginView.as_view(), name='admin_login'),
+    path('admin/register/', AdminRegisterView.as_view(), name='admin_register'),
     path('admin/books/', AdminBookListCreateView.as_view(), name='admin_books'),
     path('admin/books/<int:book_id>/', AdminBookDeleteView.as_view(), name='admin_book_delete'),
     path('admin/books/<int:book_id>/chapters/', AdminChapterListCreateView.as_view(), name='admin_chapters'),
